@@ -49,7 +49,7 @@ This package provides test related files for package %{name}.
 cp %{SOURCE1001} .
 
 %build
-%autogen --disable-static
+%autogen --disable-static --with-systemdsystemunitdir=%{_unitdir}
 
 make %{?_smp_mflags}
 
@@ -65,7 +65,7 @@ make %{?_smp_mflags}
 %license COPYING
 %{_bindir}/NodeStateManager
 %config %{_sysconfdir}/dbus-1/system.d/org.genivi.NodeStateManager.conf
-%{_libdir}/systemd/system/nodestatemanager-daemon.service
+%{_unitdir}/nodestatemanager-daemon.service
 %{_datadir}/dbus-1/system-services/org.genivi.NodeStateManager.LifeCycleControl.service
 %{_datadir}/dbus-1/interfaces/org.genivi.NodeStateManager.*.xml
 # These `.so' files are not in the 'devel' subpackage since they are

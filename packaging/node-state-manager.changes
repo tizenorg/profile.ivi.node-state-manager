@@ -1,3 +1,6 @@
+* Fri Sep 12 2014 Ossama Othman <ossama.othman@intel.com> submit/tizen_ivi/20140912.678321-1-g6599c84
+- Fix Systemd unitdir path on x86_64
+
 * Fri Sep 05 2014 Ossama Othman <ossama.othman@intel.com> b4ff31e
 - Initial packaging.
 

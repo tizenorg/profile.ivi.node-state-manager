@@ -50,7 +50,7 @@ PKG_CHECK_MODULES([PCL],      [persistence_client_library >= 0.6.0 ])
 # Derive path for storing systemd service files (e. g. /lib/systemd/system)
 AC_ARG_WITH([systemdsystemunitdir],
         AS_HELP_STRING([--with-systemdsystemunitdir=DIR], [Directory for systemd service files]),
-        [],
+        [with_systemdsystemunitdir="$withval"],
         [with_systemdsystemunitdir=$(pkg-config --silence-errors --variable=systemdsystemunitdir systemd)])
 
 if test "x${with_systemdsystemunitdir}" = "x"; then
